@@ -38,10 +38,10 @@
         </dependency>
 
 <!--        feign客户端 依赖 &#45;&#45; http客户端 声明式 可以解决resttemplate来发送请求的问题-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-openfeign</artifactId>-->
+<!--        </dependency>-->
 <!--        Feign-HttpClient依赖 优化性能 由于Feign是声明式，底层还是要委托转送请求-->
         <dependency>
             <groupId>io.github.openfeign</groupId>
