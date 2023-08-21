@@ -42,3 +42,16 @@ ribbon:  #ribbon默认策略是 懒加载 第一次加载耗时长 后续加载�
   eager-load:
     enabled: true  #默认是false 不开启饥饿加载
     clients: userservice  #指定对谁开启饥饿加载  这里是userservice -eureka客户端服务
+
+---
+#配置feign的日志级别 默认是none
+feign:
+  client:
+    config:
+      default:   #如果写默认就是全局配置  局部配置写服务的名称
+        logger-level: basic   #有四种：none basic header full
+  #配置feign httpclient连接池
+  httpclient:
+    enabled: true  #开启feign对HttpClient的支持
+    max-connections: 200 #最大连接数
+    max-connections-per-route: 50 #每个路径上的最大连接数
