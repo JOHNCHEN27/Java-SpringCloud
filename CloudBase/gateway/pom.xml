@@ -10,20 +10,21 @@
     </parent>
 
     <groupId>com.lncanswer</groupId>
-    <artifactId>feign-api</artifactId>
+    <artifactId>gateway</artifactId>
 
     <properties>
-        <maven.compiler.source>19</maven.compiler.source>
-        <maven.compiler.target>19</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
-<!--        抽取feign 将其放到一个新模块，引入feign的依赖及其实体、接口-->
+<!--        引入nacos服务依赖，gateway网关本身也是一个微服务要加入到注册中心-->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+
     </dependencies>
 
 </project>

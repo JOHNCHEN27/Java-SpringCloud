@@ -53,5 +53,5 @@ feign:
   #配置feign httpclient连接池
   httpclient:
     enabled: true  #开启feign对HttpClient的支持
-    max-connections: 200 #最大连接数
+    max-connections: 200 #最大连接数     实际开发中需要去测试最多到哪个路径的性能更优
     max-connections-per-route: 50 #每个路径上的最大连接数
