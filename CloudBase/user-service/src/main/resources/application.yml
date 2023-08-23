@@ -1,8 +1,8 @@
 server:
   port: 8081
 spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/cloud_user?useSSL=false
+  datasource:     #DockerCompose微服务集群部署时 可以用容器名代替端口 会自动映射
+    url: jdbc:mysql://mysql:3306/cloud_user?useSSL=false
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
