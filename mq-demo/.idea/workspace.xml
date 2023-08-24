@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="caf3e718-42bc-466c-bf72-58e8f5ec8550" name="Changes" comment="RabbitMQ消息队列构建">
-      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/cn/itcast/mq/listner/DirectExchangeQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/cn/itcast/mq/listner/FanoutExchangeComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/cn/itcast/mq/listner/FanoutExchangeQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/cn/itcast/mq/listner/TopicExchangeQueue.java" afterDir="false" />
+    <list default="true" id="caf3e718-42bc-466c-bf72-58e8f5ec8550" name="Changes" comment="RabbitMQ消息队列初步使用">
+      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/jsonMessageConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/src/main/java/cn/itcast/mq/config/FanoutExchage.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/main/java/cn/itcast/mq/config/FanoutExchage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/target/classes/cn/itcast/mq/listner/WorkRabbitQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/target/classes/cn/itcast/mq/listner/WorkRabbitQueue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/target/test-classes/cn/itcast/mq/helloworld/ConsumerTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/target/test-classes/cn/itcast/mq/helloworld/ConsumerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/helloworld/SpringAmqpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/helloworld/SpringAmqpTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher/target/test-classes/cn/itcast/mq/helloworld/SpringAmqpTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/target/test-classes/cn/itcast/mq/helloworld/SpringAmqpTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +58,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.SpringAmqpTest.testTopicExchange">
+  <component name="RunManager">
     <configuration name="ConsumerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.itcast.mq.helloworld.ConsumerTest" />
       <module name="consumer" />
@@ -179,7 +170,7 @@
       <workItem from="1692847001352" duration="428000" />
       <workItem from="1692847483534" duration="203000" />
       <workItem from="1692848923890" duration="7469000" />
-      <workItem from="1692882410795" duration="5809000" />
+      <workItem from="1692882410795" duration="7489000" />
     </task>
     <task id="LOCAL-00001" summary="RabbitMQ消息队列构建">
       <created>1692869555037</created>
@@ -188,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692869555038</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="RabbitMQ消息队列初步使用">
+      <created>1692888403866</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1692888403867</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +194,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="RabbitMQ消息队列构建" />
-    <option name="LAST_COMMIT_MESSAGE" value="RabbitMQ消息队列构建" />
+    <MESSAGE value="RabbitMQ消息队列初步使用" />
+    <option name="LAST_COMMIT_MESSAGE" value="RabbitMQ消息队列初步使用" />
   </component>
 </project>
