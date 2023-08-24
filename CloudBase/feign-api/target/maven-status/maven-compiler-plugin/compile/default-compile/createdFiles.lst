@@ -1,0 +1,5 @@
+com\lncanswer\pojo\User.class
+com\lncanswer\config\RestTemplateConfig.class
+com\lncanswer\Main.class
+com\lncanswer\clients\UserClient.class
+com\lncanswer\config\FeignClientConfiguration.class

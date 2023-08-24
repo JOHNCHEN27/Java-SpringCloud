@@ -1,0 +1,40 @@
+Index: ../mq-demo/.idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../mq-demo/.idea/vcs.xml b/../mq-demo/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1692847022020)
++++ b/../mq-demo/.idea/vcs.xml	(date 1692847022020)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: ../mq-demo/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../mq-demo/.idea/misc.xml b/../mq-demo/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1692847022009)
++++ b/../mq-demo/.idea/misc.xml	(date 1692847022009)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="MavenProjectsManager">
++    <option name="originalFiles">
++      <list>
++        <option value="$PROJECT_DIR$/pom.xml" />
++      </list>
++    </option>
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK" />
++</project>
+\ No newline at end of file
