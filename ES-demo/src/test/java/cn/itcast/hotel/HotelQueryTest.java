@@ -156,7 +156,7 @@ public class HotelQueryTest {
         //2.3设置一页查多少条文档（数据）
         request.source().size(15);
 
-        //3 RestHighLevelClient 对象发送请求给ES服务
+        //3 RestHighLevelClientConfig 对象发送请求给ES服务
         SearchResponse response = client.search(request, RequestOptions.DEFAULT);
         //4、解析结果
         handleResponse(response);

@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
+
 @Slf4j
 @RestController
 @RequestMapping("/hotel")
@@ -17,7 +19,7 @@ public class HotelController {
     @Autowired
     private IHotelService hotelService;
     @PostMapping("/list")
-    public PageResult search(@RequestBody RequestParams params){
+    public PageResult search(@RequestBody RequestParams params) throws IOException {
        return hotelService.search(params);
     }
 
