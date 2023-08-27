@@ -1,10 +1,13 @@
 package cn.itcast.hotel.pojo;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class HotelDoc {
     private Long id;
     private String name;
@@ -17,6 +20,8 @@ public class HotelDoc {
     private String business;
     private String location;
     private String pic;
+    private Object distance;
+    private Boolean isAD;  //广告
 
     public HotelDoc(Hotel hotel) {
         this.id = hotel.getId();
