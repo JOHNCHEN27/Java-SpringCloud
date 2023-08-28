@@ -11,7 +11,7 @@ spring:
     #  uris: 192.168.12.132
 logging:
   level:
-    cn.itcast: debug
+    cn.itcast: info
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
 mybatis-plus:

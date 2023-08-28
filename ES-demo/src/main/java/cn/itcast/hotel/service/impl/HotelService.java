@@ -28,6 +28,10 @@ import org.elasticsearch.search.aggregations.Aggregations;
 import org.elasticsearch.search.aggregations.bucket.terms.Terms;
 import org.elasticsearch.search.sort.SortBuilders;
 import org.elasticsearch.search.sort.SortOrder;
+import org.elasticsearch.search.suggest.Suggest;
+import org.elasticsearch.search.suggest.SuggestBuilder;
+import org.elasticsearch.search.suggest.SuggestBuilders;
+import org.elasticsearch.search.suggest.completion.CompletionSuggestion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -167,6 +171,44 @@ public class HotelService extends ServiceImpl<HotelMapper, Hotel> implements IHo
             map.put("星级",starNamelist);
 
             return map;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     * 根据搜索框输入的值进行分词查询 Suggestion
+     * @param key
+     * @return
+     */
+    @Override
+    public List<String> suggestion(String key) {
+        try {
+            SearchRequest request = new SearchRequest("hotel");
+            //编写DSL
+            request.source().suggest(new SuggestBuilder().addSuggestion("suggestions",
+                    SuggestBuilders.completionSuggestion("suggestion")
+                            .prefix(key)  //前缀拼音为key值开头的
+                            .skipDuplicates(true) //跳过重复
+                            .size(10)));  //展示十条数据
+            //发起请求
+            SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+            //定义一个列表来存储数据
+            List<String> list = new ArrayList<>();
+
+            //处理结果
+            Suggest suggest = response.getSuggest();
+            //获取suggest列表中具体的suggestion 根据名称获取 转化为completionSuggestion对象
+            CompletionSuggestion suggestions = suggest.getSuggestion("suggestions");
+            //拿到里面的具体数值
+            List<CompletionSuggestion.Entry.Option> options = suggestions.getOptions();
+            //遍历
+            for (CompletionSuggestion.Entry.Option option : options) {
+                String string = option.getText().toString();
+                //拿到每个字符 存入列表返回
+                list.add(string);
+            }
+            return list;
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
