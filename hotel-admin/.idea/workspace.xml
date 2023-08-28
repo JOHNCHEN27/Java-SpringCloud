@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44792dd2-8e23-4d7e-bbd5-4ed56f19c19d" name="Changes" comment="xml">
+    <list default="true" id="44792dd2-8e23-4d7e-bbd5-4ed56f19c19d" name="Changes" comment="ES和MQ联调">
       <change beforePath="$PROJECT_DIR$/../ES-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ES-demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/mapper/HotelMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/mapper/HotelMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/web/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/web/HotelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/mapper/HotelMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/mapper/HotelMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/web/HotelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/hotel/web/HotelController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +61,14 @@
       <updated>1693193085642</updated>
       <workItem from="1693193086729" duration="41000" />
     </task>
+    <task id="LOCAL-00001" summary="ES和MQ联调">
+      <created>1693209537847</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1693209537847</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,6 +76,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="xml" />
+    <MESSAGE value="ES和MQ联调" />
+    <option name="LAST_COMMIT_MESSAGE" value="ES和MQ联调" />
   </component>
 </project>
