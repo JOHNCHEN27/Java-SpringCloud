@@ -38,7 +38,7 @@ public class HotelController {
     @PostMapping
     public void saveHotel(@RequestBody Hotel hotel){
         hotelService.save(hotel);
-        rabbitTemplate.convertAndSend(MqConstants.HOTEL_EXCHANGE,MqConstants.HOTEL_INSERT_QUEUE,hotel.getId());
+        rabbitTemplate.convertAndSend(MqConstants.HOTEL_EXCHANGE,MqConstants.HOTEL_INSERT_KEY,hotel.getId());
     }
 
     @PutMapping()
@@ -47,7 +47,7 @@ public class HotelController {
             throw new InvalidParameterException("id不能为空");
         }
         hotelService.updateById(hotel);
-        rabbitTemplate.convertAndSend(MqConstants.HOTEL_EXCHANGE,MqConstants.HOTEL_INSERT_QUEUE,hotel.getId());
+        rabbitTemplate.convertAndSend(MqConstants.HOTEL_EXCHANGE,MqConstants.HOTEL_INSERT_KEY,hotel.getId());
 
     }
 

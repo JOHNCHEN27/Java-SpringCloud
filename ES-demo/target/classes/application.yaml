@@ -1,23 +1,26 @@
 server:
-  port: 8099
+  port: 8089
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/es?useSSL=false&allowPublicKeyRetrieval=true
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
+  #配置rabbitMQ地址
   rabbitmq:
     host: 192.168.12.132
     port: 5672
     username: itcast
     password: 123321
-    virtual-host: /
+    virtual-host: / #虚拟主机
 logging:
   level:
-    cn.itcast: debug
+    cn.itcast: info
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
 mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
   type-aliases-package: cn.itcast.hotel.pojo
+
+

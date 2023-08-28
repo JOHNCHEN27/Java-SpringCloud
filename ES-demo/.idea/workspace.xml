@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2b0b3ec-0a32-4e8d-8ced-7463db62b41e" name="Changes" comment="ES自定义分词器" />
+    <list default="true" id="f2b0b3ec-0a32-4e8d-8ced-7463db62b41e" name="Changes" comment="ES自定义分词器">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-admin/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-admin/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-admin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-admin/src/main/java/cn/itcast/hotel/mapper/HotelMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/src/main/java/cn/itcast/hotel/mapper/HotelMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-admin/src/main/java/cn/itcast/hotel/web/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/src/main/java/cn/itcast/hotel/web/HotelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-admin/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-admin/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-admin/target/classes/cn/itcast/hotel/mapper/HotelMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/target/classes/cn/itcast/hotel/mapper/HotelMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-admin/target/classes/cn/itcast/hotel/web/HotelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin/target/classes/cn/itcast/hotel/web/HotelController.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,28 +64,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/Java/IDEA/Code_File/SpringCloud/ES-demo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "3cbe1ed2b399334b612bce4f9166f576",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Java/IDEA/Code_File/SpringCloud/ES-demo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;3cbe1ed2b399334b612bce4f9166f576&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Spring Boot.HotelDemoApplication">
     <configuration name="HotelDemoApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hotel-demo" />
@@ -190,6 +201,7 @@
       <workItem from="1693188979261" duration="1100000" />
       <workItem from="1693190210727" duration="20000" />
       <workItem from="1693190449972" duration="1868000" />
+      <workItem from="1693206723208" duration="2226000" />
     </task>
     <task id="LOCAL-00001" summary="ES基本使用">
       <created>1692962298510</created>
