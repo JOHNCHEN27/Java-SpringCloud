@@ -28,9 +28,14 @@ import org.elasticsearch.search.aggregations.Aggregations;
 import org.elasticsearch.search.aggregations.bucket.terms.Terms;
 import org.elasticsearch.search.sort.SortBuilders;
 import org.elasticsearch.search.sort.SortOrder;
+import org.elasticsearch.search.suggest.Suggest;
+import org.elasticsearch.search.suggest.SuggestBuilder;
+import org.elasticsearch.search.suggest.SuggestBuilders;
+import org.elasticsearch.search.suggest.completion.CompletionSuggestion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.processing.Completion;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -167,6 +172,42 @@ public class HotelService extends ServiceImpl<HotelMapper, Hotel> implements IHo
             map.put("星级",starNamelist);
 
             return map;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     * ES自动分词  实现搜索框根据拼音自动分词
+     * @param key
+     * @return
+     */
+    @Override
+    public List<String> suggestion(String key) {
+        try {
+            SearchRequest request = new SearchRequest("hotel");
+            //编写DSL请求
+            request.source().suggest(new SuggestBuilder().addSuggestion("suggestions",
+                    SuggestBuilders.completionSuggestion("suggestion")
+                            .prefix(key)  //拼音前缀
+                            .skipDuplicates(true)  //跳过重复元素
+                            .size(10))); //展示十条数据
+            //发送请求
+            SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+            List<String> list = new ArrayList<>();
+            //解析结果
+            Suggest suggest = response.getSuggest();
+            //根据suggestion名称获得具体的分词内容列表 转换成completionSuggestion对象
+            CompletionSuggestion suggestion = suggest.getSuggestion("suggestions");
+            //拿到suggestion列表
+            List<CompletionSuggestion.Entry.Option> options = suggestion.getOptions();
+            //遍历每个元素存放list列表中
+            for (CompletionSuggestion.Entry.Option option : options) {
+                String string = option.getText().toString();
+                list.add(string);
+            }
+            //返回列表
+            return list;
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
