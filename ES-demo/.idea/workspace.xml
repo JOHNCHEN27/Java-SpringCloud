@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f2b0b3ec-0a32-4e8d-8ced-7463db62b41e" name="Changes" comment="ES自定义分词器">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/config/MqConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/hotel/constants/MqConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hotel-admin/hotel-admin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/.." source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\Java\Maven\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../Maven/apache-maven-3.6.1" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="E:\Java\Maven\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2USr99SMg22llsGxJRAYZjvlviz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/Java/IDEA/Code_File/SpringCloud/ES-demo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "spring.configuration.checksum": "3cbe1ed2b399334b612bce4f9166f576",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.HotelDemoApplication">
+    <configuration name="HotelDemoApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hotel-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.itcast.hotel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.itcast.hotel" />
+      <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelDemoApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HotelDocumentTest.testBulkRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hotel-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.itcast.hotel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.itcast.hotel" />
+      <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelDocumentTest" />
+      <option name="METHOD_NAME" value="testBulkRequest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HotelQueryTest.testAggregation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hotel-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.itcast.hotel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.itcast.hotel" />
+      <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelQueryTest" />
+      <option name="METHOD_NAME" value="testAggregation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HotelQueryTest.testBooleanSeach" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hotel-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.itcast.hotel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.itcast.hotel" />
+      <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelQueryTest" />
+      <option name="METHOD_NAME" value="testBooleanSeach" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HotelQueryTest.testSuggest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hotel-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.itcast.hotel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.itcast.hotel" />
+      <option name="MAIN_CLASS_NAME" value="cn.itcast.hotel.HotelQueryTest" />
+      <option name="METHOD_NAME" value="testSuggest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HotelDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="hotel-demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.itcast.hotel.HotelDemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.HotelQueryTest.testSuggest" />
+        <item itemvalue="JUnit.HotelQueryTest.testBooleanSeach" />
+        <item itemvalue="JUnit.HotelQueryTest.testAggregation" />
+        <item itemvalue="JUnit.HotelDocumentTest.testBulkRequest" />
+        <item itemvalue="JUnit.HotelDemoApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f2b0b3ec-0a32-4e8d-8ced-7463db62b41e" name="Changes" comment="" />
+      <created>1692943671516</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1692943671516</updated>
+      <workItem from="1692943672208" duration="14510000" />
+      <workItem from="1693046781920" duration="9243000" />
+      <workItem from="1693097743735" duration="7375000" />
+      <workItem from="1693115239341" duration="13258000" />
+      <workItem from="1693184953549" duration="2429000" />
+      <workItem from="1693187823345" duration="946000" />
+      <workItem from="1693188979261" duration="1100000" />
+      <workItem from="1693190210727" duration="20000" />
+      <workItem from="1693190449972" duration="1868000" />
+    </task>
+    <task id="LOCAL-00001" summary="ES基本使用">
+      <created>1692962298510</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1692962298510</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ES查询">
+      <created>1693056576471</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1693056576471</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ES查询">
+      <created>1693056588923</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1693056588923</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ES旅游案例">
+      <created>1693105524298</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1693105524298</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ES聚合&amp;&amp;自动补全">
+      <created>1693134534048</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1693134534048</updated>
+    </task>
+    <task id="LOCAL-00006" summary="ES自定义分词器">
+      <created>1693187280803</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1693187280803</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ES自定义分词器">
+      <created>1693190045123</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1693190045123</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ES基本使用" />
+    <MESSAGE value="ES查询" />
+    <MESSAGE value="ES旅游案例" />
+    <MESSAGE value="ES聚合&amp;&amp;自动补全" />
+    <MESSAGE value="ES自定义分词器" />
+    <option name="LAST_COMMIT_MESSAGE" value="ES自定义分词器" />
+  </component>
+</project>
