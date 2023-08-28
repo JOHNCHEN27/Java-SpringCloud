@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 @Slf4j
 @RestController
@@ -22,5 +24,12 @@ public class HotelController {
     public PageResult search(@RequestBody RequestParams params) throws IOException {
        return hotelService.search(params);
     }
+
+    @PostMapping("filters")
+    public Map<String , List<String>> getFilters(@RequestBody RequestParams params){
+        return hotelService.filters(params);
+    }
+
+
 
 }

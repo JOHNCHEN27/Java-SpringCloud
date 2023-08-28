@@ -5,6 +5,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,6 +27,7 @@ public class HotelDoc {
     private String pic;
     private Object distance;
     private Boolean isAD;  //广告
+    private List<String> suggestion; //自定义分词器
 
     public HotelDoc(Hotel hotel) {
         this.id = hotel.getId();
@@ -35,5 +41,17 @@ public class HotelDoc {
         this.business = hotel.getBusiness();
         this.location = hotel.getLatitude() + ", " + hotel.getLongitude();
         this.pic = hotel.getPic();
+        //suggestion复制 将品牌和商圈复制给suggestion
+        if(this.business.contains("/")) {
+            //bisiness有多个值 需要切割
+            String[] arr = this.business.split("、");
+            //添加元素
+            this.suggestion = new ArrayList<>();
+            this.suggestion.add(this.brand);
+            Collections.addAll(this.suggestion, arr);
+        }else {
+            this.suggestion = Arrays.asList(this.brand, this.business);
+        }
+
     }
 }

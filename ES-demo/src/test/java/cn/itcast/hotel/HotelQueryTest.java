@@ -11,19 +11,30 @@ import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
+import org.elasticsearch.common.text.Text;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
+import org.elasticsearch.search.aggregations.Aggregation;
+import org.elasticsearch.search.aggregations.AggregationBuilders;
+import org.elasticsearch.search.aggregations.Aggregations;
+import org.elasticsearch.search.aggregations.bucket.terms.Terms;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightField;
+import org.elasticsearch.search.suggest.Suggest;
+import org.elasticsearch.search.suggest.SuggestBuilder;
+import org.elasticsearch.search.suggest.SuggestBuilders;
+import org.elasticsearch.search.suggest.completion.CompletionSuggestion;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class HotelQueryTest {
     /**
@@ -178,6 +189,70 @@ public class HotelQueryTest {
        SearchResponse response = client.search(request,RequestOptions.DEFAULT);
        handleResponse(response);
 
+    }
+
+    /**
+     * 聚合操作 对相应的数据进行分组 等同于数据库中的分组 group by
+     * @throws IOException
+     */
+    @Test
+    void testAggregation() throws IOException {
+        SearchRequest request = new SearchRequest("hotel");
+        //准备DSL 聚合这里不需要文档 只做聚合
+        request.source().aggregation(AggregationBuilders
+                .terms("brandAgg")
+                .field("brand")
+                .size(10)); //聚合的名称
+                       //参与聚合的字段);  //展示十条数据
+        //发送请求
+        SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+
+        //解析聚合结果  拿到返回资源里的聚合结果
+        Aggregations aggregations = response.getAggregations();
+        //根据聚合的名称取出相应的聚合结果 用Terms接受
+        Terms brandAgg = aggregations.get("brandAgg");
+        //拿到聚合结果中的bucket 集合
+        List<? extends Terms.Bucket> buckets = brandAgg.getBuckets();
+        //遍历buckets集合中的每个数据 拿到相应的值
+//         buckets.stream().map((item)->{
+//            String keyAsString = item.getKeyAsString();
+//            System.out.println(keyAsString);
+//            return item;
+//        });
+        for (Terms.Bucket bucket : buckets) {
+            String key = bucket.getKeyAsString();
+            System.out.println(key);
+        }
+
+    }
+
+    /**
+     * 自定义分词器 suggestion
+     * @throws IOException
+     */
+    @Test
+    void testSuggest() throws IOException {
+        //1、准备Request
+        SearchRequest request = new SearchRequest("hotel");
+        //2、准备DSL
+        request.source().suggest(new SuggestBuilder().addSuggestion("suggestions",
+                SuggestBuilders.completionSuggestion("suggestion")
+                        .prefix("h")
+                        .skipDuplicates(true)
+                        .size(10)
+        ));
+        //3、发起请求
+        SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+       // System.out.println(response);
+       //4、解析结果
+        Suggest suggest = response.getSuggest();
+        //4、1 根据补全查询名称，获取补全结果 可以换成CompletionSuggestion对象
+        CompletionSuggestion suggestions= suggest.getSuggestion("suggestions");
+        List<CompletionSuggestion.Entry.Option> options = suggestions.getOptions();
+        for (CompletionSuggestion.Entry.Option option : options) {
+            String text = option.getText().toString();
+            System.out.println(text);
+        }
     }
 
 
