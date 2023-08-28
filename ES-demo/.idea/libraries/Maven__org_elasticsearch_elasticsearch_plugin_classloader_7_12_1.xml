@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: org.elasticsearch:elasticsearch-plugin-classloader:7.12.1" type="java-imported" external-system-id="Maven">
+    <properties groupId="org.elasticsearch" artifactId="elasticsearch-plugin-classloader" version="7.12.1" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../Maven/repository/org/elasticsearch/elasticsearch-plugin-classloader/7.12.1/elasticsearch-plugin-classloader-7.12.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../Maven/repository/org/elasticsearch/elasticsearch-plugin-classloader/7.12.1/elasticsearch-plugin-classloader-7.12.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../Maven/repository/org/elasticsearch/elasticsearch-plugin-classloader/7.12.1/elasticsearch-plugin-classloader-7.12.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
