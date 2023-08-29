@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a73aaacf-5bc2-4d3f-b059-d3cf2b21bd32" name="Changes" comment="初识docker">
-      <change afterPath="$PROJECT_DIR$/feign-api/src/main/java/com/lncanswer/config/DefaultFeignConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feign-api/src/main/java/com/lncanswer/factory/UserClientFallbackFactory.java" afterDir="false" />
+    <list default="true" id="a73aaacf-5bc2-4d3f-b059-d3cf2b21bd32" name="Changes" comment="初识Sentinel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feign-api/src/main/java/com/lncanswer/clients/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/feign-api/src/main/java/com/lncanswer/clients/UserClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/target/classes/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mq-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mq-demo/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +145,7 @@
       <workItem from="1692848912538" duration="48000" />
       <workItem from="1693215453051" duration="126000" />
       <workItem from="1693216356376" duration="3189000" />
-      <workItem from="1693270533411" duration="6014000" />
+      <workItem from="1693270533411" duration="6695000" />
     </task>
     <task id="LOCAL-00001" summary="Nacos实现配置管理">
       <created>1692587212742</created>
@@ -209,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692847398996</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="初识Sentinel">
+      <created>1693312643972</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1693312643972</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +215,7 @@
     <MESSAGE value="gateway初步构建" />
     <MESSAGE value="了解使用gateway" />
     <MESSAGE value="初识docker" />
-    <option name="LAST_COMMIT_MESSAGE" value="初识docker" />
+    <MESSAGE value="初识Sentinel" />
+    <option name="LAST_COMMIT_MESSAGE" value="初识Sentinel" />
   </component>
 </project>
