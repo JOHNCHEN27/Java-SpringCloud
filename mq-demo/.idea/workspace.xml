@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caf3e718-42bc-466c-bf72-58e8f5ec8550" name="Changes" comment="RabbitMQ消息队列初步使用">
-      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/jsonMessageConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CloudBase/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CloudBase/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +48,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/Java/IDEA/Code_File/SpringCloud/mq-demo",
+    "last_opened_file_path": "E:/Java/IDEA/Code_File/SpringCloud/CloudBase",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,7 +57,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ConsumerTest">
     <configuration name="ConsumerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.itcast.mq.helloworld.ConsumerTest" />
       <module name="consumer" />
@@ -171,6 +170,7 @@
       <workItem from="1692847483534" duration="203000" />
       <workItem from="1692848923890" duration="7469000" />
       <workItem from="1692882410795" duration="7489000" />
+      <workItem from="1693215586063" duration="767000" />
     </task>
     <task id="LOCAL-00001" summary="RabbitMQ消息队列构建">
       <created>1692869555037</created>
