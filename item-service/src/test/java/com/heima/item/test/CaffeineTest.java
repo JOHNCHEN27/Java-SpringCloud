@@ -33,6 +33,8 @@ public class CaffeineTest {
 
     /*
      基于大小设置驱逐策略：
+     默认情况下：当一个缓存元素过期的时候，Caffeine不会自动立即将其清理和驱逐。
+     而是在一次读或写操作后，或者在空闲时间完成对失效数据的驱逐。
      */
     @Test
     void testEvictByNum() throws InterruptedException {
