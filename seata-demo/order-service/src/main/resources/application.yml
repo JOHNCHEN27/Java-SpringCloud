@@ -7,7 +7,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql:///seata_demo?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false
     username: root
-    password: 123
+    password: root
   cloud:
     nacos:
       server-addr: localhost:8848
@@ -23,3 +23,20 @@ logging:
     cn.itcast: debug
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
+
+seata:
+  registry:
+    # TC服务注册中心的配置，微服务根据这些信息去注册中心获取tc服务地址
+    # 参考tc服务自己的registry.conf中的配置，
+    # 包括：地址、namespace、group、application-name 、cluster
+    type: nacos
+    nacos:
+      server-addr: 127.0.0.1:8848 #registry配置的nacos相关信息
+      namespace: ""  #指定的命名空间 我们配置的是public 默认只需填写空字符串
+      group: DEFAULT_GROUP  #registry配置中的组
+      application: seata-tc-server  #registry配置中的seata服务名
+    tx-service-group: seata-demo    #事务组 自己指定名称 根据这个获取tc服务的cluster名称
+    service:
+      vgroup-mapping:  #事务组和Tc服务的cluster的映射关系
+        seata-demo: SH #我们指定是上海
+  data-source-proxy-mode: XA #每个参与分布式事务管理的服务都要开启 seata默认是AT模式
