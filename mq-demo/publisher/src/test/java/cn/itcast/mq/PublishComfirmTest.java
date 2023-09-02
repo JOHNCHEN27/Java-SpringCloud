@@ -1,17 +1,19 @@
-package cn.itcast.mq.helloworld;
+package cn.itcast.mq;
 
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.Test;
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.UUID;
 
-@Slf4j
+@RunWith(SpringRunner.class)
 @SpringBootTest
+@Slf4j
 public class PublishComfirmTest {
     @Autowired
     private RabbitTemplate rabbitTemplate;
@@ -27,14 +29,14 @@ public class PublishComfirmTest {
     @Test
     public void testSendMessage(){
          //封装消息
-        String msg = "Spring Map";
+        String msg = "Spring Map!!!";
         //消息id 需要封装到CorrelationData中
         CorrelationData correlationData = new CorrelationData(UUID.randomUUID().toString());
         //添加callback
         correlationData.getFuture().addCallback( result -> {
             if (result.isAck()){
                 //ack 消息发送成功
-                log.debug("消息发送成功，Id:{}",correlationData.getId());
+                log.info("消息发送成功，Id:{}",correlationData.getId());
             }else {
                 //nack 消息发送失败
                 log.error("消息发送失败,Id:{},原因：{}",correlationData.getId(),result.getReason());
@@ -43,7 +45,7 @@ public class PublishComfirmTest {
         }, ex -> log.info("消息发送异常, ID :{},原因：{}",correlationData.getId(),ex.getMessage()));
 
         //发送消息
-        rabbitTemplate.convertAndSend("","",msg,correlationData);
+        rabbitTemplate.convertAndSend("simple","simple1",msg,correlationData);
 
 
     }
