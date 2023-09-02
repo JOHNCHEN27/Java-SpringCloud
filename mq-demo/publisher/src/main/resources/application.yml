@@ -1,6 +1,8 @@
 logging:
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
+  level:
+    cn.itcast.mq: info
 
 #导入amqp消息队列依赖之后 添加配置连接mq
 spring:
@@ -10,3 +12,7 @@ spring:
     virtual-host: / #虚拟主机
     username: itcast #用户名
     password: 123321 #用户密码
+    publisher-confirm-type: correlated  #开启publish-confirm correlated异步回调
+    publisher-returns: true    #开启publisher return
+    template:
+      mandatory: true   #定义消息路由失败的策略，true则调用ReturnCallback，false直接丢弃消息

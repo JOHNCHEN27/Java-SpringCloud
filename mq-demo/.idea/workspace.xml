@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caf3e718-42bc-466c-bf72-58e8f5ec8550" name="Changes" comment="RabbitMQ消息队列初步使用">
-      <change beforePath="$PROJECT_DIR$/../CloudBase/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CloudBase/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/cn/itcast/mq/config/CommonConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/cn/itcast/mq/config/ExchangeAndQueueBinding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/CommonConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/ExchageQueueConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/helloworld/PublishComfirmTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer/src/main/java/cn/itcast/mq/config/FanoutExchage.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/main/java/cn/itcast/mq/config/StaticExchangeAndQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publisher/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +39,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../Maven/apache-maven-3.6.1" />
         <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="E:\Java\Maven\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -48,15 +58,22 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/Java/IDEA/Code_File/SpringCloud/CloudBase",
+    "last_opened_file_path": "E:/Java/IDEA/Code_File/SpringCloud/mq-demo/consumer/src/main/java/cn/itcast/mq/config",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "spring.configuration.checksum": "3de4bb7a7603da4f744dd8f601b01c3a",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Java\IDEA\Code_File\SpringCloud\mq-demo\consumer\src\main\java\cn\itcast\mq\config" />
+      <recent name="E:\Java\IDEA\Code_File\SpringCloud\mq-demo\publisher\src\main\java\cn\itcast\mq\config" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.ConsumerTest">
     <configuration name="ConsumerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.itcast.mq.helloworld.ConsumerTest" />
@@ -150,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SpringAmqpTest.testTopicExchange" />
-        <item itemvalue="JUnit.SpringAmqpTest.testDirectExchange" />
-        <item itemvalue="JUnit.SpringAmqpTest.testFanoutExchange" />
-        <item itemvalue="Application.ConsumerTest" />
         <item itemvalue="JUnit.SpringAmqpTest.testWorkRabbitQueue" />
+        <item itemvalue="JUnit.SpringAmqpTest.testTopicExchange" />
+        <item itemvalue="JUnit.SpringAmqpTest.testFanoutExchange" />
+        <item itemvalue="JUnit.SpringAmqpTest.testDirectExchange" />
+        <item itemvalue="Application.ConsumerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -171,6 +188,7 @@
       <workItem from="1692848923890" duration="7469000" />
       <workItem from="1692882410795" duration="7489000" />
       <workItem from="1693215586063" duration="767000" />
+      <workItem from="1693620757881" duration="3670000" />
     </task>
     <task id="LOCAL-00001" summary="RabbitMQ消息队列构建">
       <created>1692869555037</created>
