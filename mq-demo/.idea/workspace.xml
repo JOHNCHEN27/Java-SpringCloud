@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="caf3e718-42bc-466c-bf72-58e8f5ec8550" name="Changes" comment="RabbitMQ消息队列初步使用">
-      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/cn/itcast/mq/config/CommonConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/cn/itcast/mq/config/ExchangeAndQueueBinding.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/CommonConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/ExchageQueueConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/helloworld/PublishComfirmTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/src/main/java/cn/itcast/mq/config/FanoutExchage.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/main/java/cn/itcast/mq/config/StaticExchangeAndQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/main/resources/application.yml" afterDir="false" />
-    </list>
+
+    <list default="true" id="caf3e718-42bc-466c-bf72-58e8f5ec8550" name="Changes" comment="RabbitMQ可靠性" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -188,7 +178,7 @@
       <workItem from="1692848923890" duration="7469000" />
       <workItem from="1692882410795" duration="7489000" />
       <workItem from="1693215586063" duration="767000" />
-      <workItem from="1693620757881" duration="3670000" />
+      <workItem from="1693620757881" duration="3985000" />
     </task>
     <task id="LOCAL-00001" summary="RabbitMQ消息队列构建">
       <created>1692869555037</created>
@@ -204,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692888403867</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="RabbitMQ可靠性">
+      <created>1693624728535</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1693624728535</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +210,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="RabbitMQ消息队列构建" />
     <MESSAGE value="RabbitMQ消息队列初步使用" />
-    <option name="LAST_COMMIT_MESSAGE" value="RabbitMQ消息队列初步使用" />
+    <MESSAGE value="RabbitMQ可靠性" />
+    <option name="LAST_COMMIT_MESSAGE" value="RabbitMQ可靠性" />
   </component>
 </project>
