@@ -1,16 +1,13 @@
-package cn.itcast.mq.helloworld;
+package cn.itcast.mq;
 
-import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.ConnectionFactory;
-import org.junit.Test;
+import com.rabbitmq.client.*;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
-public class PublisherTest {
-    @Test
-    public void testSendMessage() throws IOException, TimeoutException {
+public class ConsumerTest {
+
+    public static void main(String[] args) throws IOException, TimeoutException {
         // 1.建立连接
         ConnectionFactory factory = new ConnectionFactory();
         // 1.1.设置连接参数，分别是：主机名、端口号、vhost、用户名、密码
@@ -29,14 +26,16 @@ public class PublisherTest {
         String queueName = "simple.queue";
         channel.queueDeclare(queueName, false, false, false, null);
 
-        // 4.发送消息
-        String message = "hello, rabbitmq!";
-        channel.basicPublish("", queueName, null, message.getBytes());
-        System.out.println("发送消息成功：【" + message + "】");
-
-        // 5.关闭通道和连接
-        channel.close();
-        connection.close();
-
+        // 4.订阅消息
+        channel.basicConsume(queueName, true, new DefaultConsumer(channel){
+            @Override
+            public void handleDelivery(String consumerTag, Envelope envelope,
+                                       AMQP.BasicProperties properties, byte[] body) throws IOException {
+                // 5.处理消息
+                String message = new String(body);
+                System.out.println("接收到消息：【" + message + "】");
+            }
+        });
+        System.out.println("等待接收消息。。。。");
     }
 }

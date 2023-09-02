@@ -1,4 +1,4 @@
-package cn.itcast.mq.helloworld;
+package cn.itcast.mq;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
