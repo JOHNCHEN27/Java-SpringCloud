@@ -4,22 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="caf3e718-42bc-466c-bf72-58e8f5ec8550" name="Changes" comment="RabbitMQ可靠性">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/publisher.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/ErrorExchangeAndQueueConfig.java" afterDir="false" />
+    <list default="true" id="caf3e718-42bc-466c-bf72-58e8f5ec8550" name="Changes" comment="RabbitMQ消息重发机制">
+      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/TTLMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/DelayExchangeConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/TTLConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/DelayExchangeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/src/test/java/cn/itcast/mq/helloworld/ConsumerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/test/java/cn/itcast/mq/ConsumerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/ExchageQueueConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/ExchageQueueConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/CommonConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/CommonConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/ErrorExchangeAndQueueConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/ErrorExchangeAndQueueConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/publisher/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/helloworld/PublishComfirmTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/PublishComfirmTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/helloworld/PublisherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/PublisherTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/helloworld/SpringAmqpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/SpringAmqpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/PublishComfirmTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/PublishComfirmTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/PublisherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/PublisherTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/publisher/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher/target/classes/cn/itcast/mq/PublisherApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/target/classes/cn/itcast/mq/PublisherApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher/target/test-classes/cn/itcast/mq/helloworld/PublisherTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher/target/test-classes/cn/itcast/mq/helloworld/SpringAmqpTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,35 +51,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/Java/IDEA/Code_File/SpringCloud/mq-demo/consumer/src/main/java/cn/itcast/mq/config",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
-    "spring.configuration.checksum": "3de4bb7a7603da4f744dd8f601b01c3a",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Java/IDEA/Code_File/SpringCloud/mq-demo/consumer/src/main/java/cn/itcast/mq/config&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;3de4bb7a7603da4f744dd8f601b01c3a&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Java\IDEA\Code_File\SpringCloud\mq-demo\consumer\src\main\java\cn\itcast\mq\config" />
       <recent name="E:\Java\IDEA\Code_File\SpringCloud\mq-demo\publisher\src\main\java\cn\itcast\mq\config" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PublishComfirmTest.testSendMessage (1)">
+  <component name="RunManager" selected="JUnit.DelayExchangeTest.testDelayExchange">
+    <configuration name="DelayExchangeTest.testDelayExchange" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="publisher" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.itcast.mq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.itcast.mq" />
+      <option name="MAIN_CLASS_NAME" value="cn.itcast.mq.DelayExchangeTest" />
+      <option name="METHOD_NAME" value="testDelayExchange" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PublishComfirmTest.testSendMessage (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="publisher" />
       <extension name="coverage">
@@ -100,49 +112,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PublishComfirmTest.testSendMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PublishComfirmTest.testTTLMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="publisher" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.itcast.mq.helloworld.*" />
+          <option name="PATTERN" value="cn.itcast.mq.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cn.itcast.mq.helloworld" />
-      <option name="MAIN_CLASS_NAME" value="cn.itcast.mq.helloworld.PublishComfirmTest" />
-      <option name="METHOD_NAME" value="testSendMessage" />
+      <option name="PACKAGE_NAME" value="cn.itcast.mq" />
+      <option name="MAIN_CLASS_NAME" value="cn.itcast.mq.PublishComfirmTest" />
+      <option name="METHOD_NAME" value="testTTLMessage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringAmqpTest.testRabbitTemplate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PublisherTest.testTTLMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="publisher" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.itcast.mq.helloworld.*" />
+          <option name="PATTERN" value="cn.itcast.mq.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cn.itcast.mq.helloworld" />
-      <option name="MAIN_CLASS_NAME" value="cn.itcast.mq.helloworld.SpringAmqpTest" />
-      <option name="METHOD_NAME" value="testRabbitTemplate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SpringAmqpTest.testWorkRabbitQueue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="publisher" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.itcast.mq.helloworld.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cn.itcast.mq.helloworld" />
-      <option name="MAIN_CLASS_NAME" value="cn.itcast.mq.helloworld.SpringAmqpTest" />
-      <option name="METHOD_NAME" value="testWorkRabbitQueue" />
+      <option name="PACKAGE_NAME" value="cn.itcast.mq" />
+      <option name="MAIN_CLASS_NAME" value="cn.itcast.mq.PublisherTest" />
+      <option name="METHOD_NAME" value="testTTLMessage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -176,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PublishComfirmTest.testSendMessage (1)" />
-        <item itemvalue="JUnit.PublishComfirmTest.testSendMessage" />
-        <item itemvalue="JUnit.SpringAmqpTest.testRabbitTemplate" />
+        <item itemvalue="JUnit.DelayExchangeTest.testDelayExchange" />
         <item itemvalue="Spring Boot.PublisherApplication" />
-        <item itemvalue="JUnit.SpringAmqpTest.testWorkRabbitQueue" />
+        <item itemvalue="JUnit.PublishComfirmTest.testTTLMessage" />
+        <item itemvalue="JUnit.PublisherTest.testTTLMessage" />
+        <item itemvalue="JUnit.PublishComfirmTest.testSendMessage (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +193,8 @@
       <workItem from="1692848923890" duration="7469000" />
       <workItem from="1692882410795" duration="7489000" />
       <workItem from="1693215586063" duration="767000" />
-      <workItem from="1693620757881" duration="11206000" />
+      <workItem from="1693620757881" duration="11473000" />
+      <workItem from="1693701548102" duration="13119000" />
     </task>
     <task id="LOCAL-00001" summary="RabbitMQ消息队列构建">
       <created>1692869555037</created>
@@ -227,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693638228185</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="RabbitMQ消息重发机制">
+      <created>1693645185497</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1693645185497</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +241,7 @@
     <MESSAGE value="RabbitMQ消息队列构建" />
     <MESSAGE value="RabbitMQ消息队列初步使用" />
     <MESSAGE value="RabbitMQ可靠性" />
-    <option name="LAST_COMMIT_MESSAGE" value="RabbitMQ可靠性" />
+    <MESSAGE value="RabbitMQ消息重发机制" />
+    <option name="LAST_COMMIT_MESSAGE" value="RabbitMQ消息重发机制" />
   </component>
 </project>

@@ -3,12 +3,15 @@ package cn.itcast.mq;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.core.MessageBuilder;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 
 @RunWith(SpringRunner.class)
@@ -49,4 +52,29 @@ public class PublishComfirmTest {
 
 
     }
+
+    /**
+     * 测试 消息和队列设置过期时间 将消息发送到与消息目标队列指定的死信交换机中
+     * 实现延迟发送 --延迟队列
+     */
+    @Test
+    public void testTTLMessage() {
+        Message msg = MessageBuilder
+                .withBody("TTLExchange".getBytes(StandardCharsets.UTF_8))
+                .build();
+        //消息ID 需要封装到CorrelationData中  每条死信消息指定一个唯一ID用于区分
+        CorrelationData correlationData = new CorrelationData(UUID.randomUUID().toString());
+        //给correlationData添加一个Confirm确认
+        correlationData.getFuture().addCallback(result -> {
+                    if (result.isAck()) {
+                        log.info("发送消息成功 id : {}", correlationData.getId());
+                    } else {
+                        log.info("消息发送失败, id:{},原因：{}", correlationData.getId(), result.getReason());
+                    }
+                },
+                ex -> log.info("发送消息异常,ID:{},原因：{}", correlationData.getId(), ex.getMessage()));
+        //发送消息
+        rabbitTemplate.convertAndSend("ttl.direct","ttl",msg.getBody().toString(),correlationData);
+    }
+
 }

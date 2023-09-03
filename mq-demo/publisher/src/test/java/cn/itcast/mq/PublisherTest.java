@@ -3,16 +3,27 @@ package cn.itcast.mq;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
+import org.springframework.amqp.core.Correlation;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageBuilder;
 import org.springframework.amqp.core.MessageDeliveryMode;
+import org.springframework.amqp.rabbit.connection.CorrelationData;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.UUID;
 import java.util.concurrent.TimeoutException;
 
+@Slf4j
+@Component
 public class PublisherTest {
+
     @Test
     public void testSendMessage() throws IOException, TimeoutException {
         // 1.建立连接
@@ -49,10 +60,12 @@ public class PublisherTest {
      * 可以自己根据需求更改消息是否需要持久化
      */
     @Test
-    public void testMsgDurable(){
+    public void testMsgDurable() {
         Message msg = MessageBuilder
                 .withBody("消息持久化！".getBytes(StandardCharsets.UTF_8))
                 .setDeliveryMode(MessageDeliveryMode.PERSISTENT) //消息持久化
                 .build();
     }
+
+
 }
