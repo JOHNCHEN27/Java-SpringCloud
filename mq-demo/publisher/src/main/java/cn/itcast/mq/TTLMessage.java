@@ -2,10 +2,7 @@ package cn.itcast.mq;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Message;
-import org.springframework.amqp.rabbit.annotation.Exchange;
-import org.springframework.amqp.rabbit.annotation.Queue;
-import org.springframework.amqp.rabbit.annotation.QueueBinding;
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.amqp.rabbit.annotation.*;
 import org.springframework.stereotype.Component;
 
 @Slf4j
@@ -32,5 +29,17 @@ public class TTLMessage {
     @RabbitListener(queues = "delay.queue")
     public void listenerDelayQueue(String msg){
         log.info("接受到delayQueue的消息：{}",msg);
+    }
+
+    /**
+     * 基于注解的方式声明惰性队列 需要指定队列arguments参数为 x-queue-mode为lazy
+     */
+    @RabbitListener(queuesToDeclare = @Queue(
+            name = "lazy1.queue",
+            durable = "true",
+            arguments = @Argument(name = "x-queue-mode",value = "lazy")
+    ))
+    public void listenLazyQueue(String msg){
+        log.info("接受到lazy.queue的消息：{}",msg);
     }
 }

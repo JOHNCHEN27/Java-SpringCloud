@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="caf3e718-42bc-466c-bf72-58e8f5ec8550" name="Changes" comment="RabbitMQ消息重发机制">
-      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/TTLMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/DelayExchangeConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/TTLConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/DelayExchangeTest.java" afterDir="false" />
+    <list default="true" id="caf3e718-42bc-466c-bf72-58e8f5ec8550" name="Changes" comment="TTL延迟消息">
+      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/lanzyQueueConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/CommonConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/CommonConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/ErrorExchangeAndQueueConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/config/ErrorExchangeAndQueueConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/PublishComfirmTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/PublishComfirmTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/PublisherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/test/java/cn/itcast/mq/PublisherTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/TTLMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/main/java/cn/itcast/mq/TTLMessage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +186,7 @@
       <workItem from="1692882410795" duration="7489000" />
       <workItem from="1693215586063" duration="767000" />
       <workItem from="1693620757881" duration="11473000" />
-      <workItem from="1693701548102" duration="13119000" />
+      <workItem from="1693701548102" duration="14906000" />
     </task>
     <task id="LOCAL-00001" summary="RabbitMQ消息队列构建">
       <created>1692869555037</created>
@@ -231,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693645185497</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="TTL延迟消息">
+      <created>1693717001706</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1693717001706</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +241,7 @@
     <MESSAGE value="RabbitMQ消息队列初步使用" />
     <MESSAGE value="RabbitMQ可靠性" />
     <MESSAGE value="RabbitMQ消息重发机制" />
-    <option name="LAST_COMMIT_MESSAGE" value="RabbitMQ消息重发机制" />
+    <MESSAGE value="TTL延迟消息" />
+    <option name="LAST_COMMIT_MESSAGE" value="TTL延迟消息" />
   </component>
 </project>
