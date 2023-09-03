@@ -2,7 +2,7 @@ logging:
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
   level:
-    root: debug
+    root: info
 
 #导入amqp消息队列依赖之后 添加配置连接mq
 spring:
@@ -17,9 +17,9 @@ spring:
     template:
       mandatory: true   #定义消息路由失败的策略，true则调用ReturnCallback，false直接丢弃消息
     listener:
-      simple:        #消费者处理消息后可以想MQ发送ack回执，收到后会删除该消息
+      simple:        #消费者处理消息后可以向MQ发送ack回执，收到后会删除该消息
         prefetch: 1
-        acknowledge-mode: none  #none 关闭ack manual 手动ack auto 自动ack 默认none
+        acknowledge-mode: auto  #none 关闭ack manual 手动ack auto 自动ack 默认none
     #none模式 MQ假定消费者获取消息之后会处理，消息发送后直接删除
     #auto模式 spring检测监听（listener）代码是否出现异常，如果没有出现异常 返回ack 出现异常返回nack
     #auto模式下如果出现异常会重新发送消息
